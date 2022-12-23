@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
     // ©è¹F²×ÂI
     void OnTriggerEnter2D(Collider2D other)
     {
-        SceneManager.LoadScene("ClearScene");
+        //SceneManager.LoadScene("ClearScene");
     }
 
 }
