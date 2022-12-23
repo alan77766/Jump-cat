@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9bd698057f5c5934ebfc7deb2e6a24ba
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ArrowPrefab: {instanceID: 0}
+  - Player: {instanceID: 0}
+  - hpgauge: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
