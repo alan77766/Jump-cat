@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; // 使用 LoadScene 必要的引用程式敘述 !!
 
+
 public class Player : MonoBehaviour
 {
     Rigidbody2D rigid2D;          // 用來放貓咪的剛體公開變數
@@ -10,6 +11,7 @@ public class Player : MonoBehaviour
     public float jumpForce = 680.0f;     // 跳躍力預設值
     public float walkForce = 30.0f;      // 移動推力預設值
     public float maxWalkSpeed = 2.0f;    // 限制移動的速度值
+    public GameObject gameManager;
 
     void Start()
     {
@@ -58,9 +60,16 @@ public class Player : MonoBehaviour
     }
 
     // 抵達終點
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        //SceneManager.LoadScene("ClearScene");
+       
+        if (collision.tag == "Arrow")
+        {
+            gameManager.GetComponent<GameManager>().DecreaseHp(); // 扣血
+        }
+        else if (collision.gameObject.tag == "catfood")
+            gameManager.GetComponent<GameManager>().IncreaseHp();
+      
     }
 
 }
